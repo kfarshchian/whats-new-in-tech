@@ -4,46 +4,43 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>What's New In Tech</title>
+  <title>Tech Blog</title>
   <link rel="stylesheet" href="/css/jass.css">
   <link rel="stylesheet" href="/css/style.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma-rtl.min.css">
+ 
 </head>
 
 <body>
   <div class="flex-column justify-space-around">
-    <header class="display-flex justify-space-between align-center p-2">
-      <h1>
-        <a href="/">What's new in Tech!</a>
-      </h1>
-      <nav>
-        <a href="/post">Posts</a>
+    <header class="hero">
+      <h1 class="title">What's New in Tech</h1>
+      <nav class="nav">
+       <a href="/">Home</a>
         {{#if logged_in}}
-        <a href="/profile">profile</a> |
+        <a href="/profile">Dashboard</a> |
         <button class="no-button" id="logout">logout</button>
         {{else}}
-        <a href="/login">login</a>
+        <a href="/login">Login</a>
         {{/if}}
       </nav>
     </header>
     <main class="container container-fluid mt-5">
       {{{ body }}}
     </main>
-    <footer>
-      
+    <footer>    
     </footer>
   </div>
-
   {{#if logged_in}}
   <script src="/js/logout.js"></script>
   {{/if}}
 
-
-  <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/dayjs@1.11.3/dayjs.min.js"
-      integrity="sha256-iu/zLUB+QgISXBLCW/mcDi/rnf4m4uEDO0wauy76x7U=" crossorigin="anonymous"></script>
+    <script src="/js/comment.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/dayjs@1.11.3/dayjs.min.js"
+        integrity="sha256-iu/zLUB+QgISXBLCW/mcDi/rnf4m4uEDO0wauy76x7U=" crossorigin="anonymous"></script>
 </body>
 
 </html>
