@@ -2,8 +2,6 @@ const router = require('express').Router();
 const withAuth = require('../../utils/auth');
 const { Comment } = require('../../models');
 
-//this section to find all comments
-
 router.get('/', (req,res) => {
     Comment.findAll({})
     .then(commentData => res.json(commentData))
@@ -25,8 +23,6 @@ router.get('/:id', (req, res) => {
         })
 });
 
-// this section to create comment 
-
 router.post('/', async (req, res) => {
   try {
     const newComment = await Comment.create({
@@ -39,18 +35,15 @@ router.post('/', async (req, res) => {
   }
 });
 
-//this section to  delete comment
-
-router.delete('/:id', withAuth, async (req, res) => {
+router.delete('/:id', async (req, res) => {
   try {
     const commentData = await Comment.destroy({
       where: {
-        id: req.params.id,
-        user_id: req.session.user_id,
+        id: req.params.id
       },
     });
     if (!commentData) {
-      res.status(404).json({ message: 'No blog found with this id!' });
+      res.status(404).json({ message: 'No comment found with this id!' });
       return;
     }
     res.status(200).json(commentData);

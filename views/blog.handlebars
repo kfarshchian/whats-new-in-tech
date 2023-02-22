@@ -10,14 +10,15 @@
     <textarea class="ml-5" id='comment_description' name="comment-body"></textarea>
   </div>
   <div>
-    <button class="button is-warning ml-5 mb-5" type="submit">Add Comment</button>
+    <button class="button is-primary ml-5 mb-5" type="submit">Submit Comment</button>
   </div>
 </form>
+<div class="comment_body" id="comment_body">
 {{/if}}
-</div>
  {{#each comments as |comment|}}
- <div style="border-style: solid;">
- <p>{{comment.comment_description}}</p>
+ <div  style="border-style: solid;">
+ <p id='comment_description' name="comment-body">{{comment.comment_description}}</p>
+ <button class="delete-comment-button" id="delete-comment-button" comment-id="{{comment.id}}" >Delete</button>
  </div>
  {{/each}}
-
+</div>
