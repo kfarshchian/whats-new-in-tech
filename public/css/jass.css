@@ -1,0 +1,47 @@
+*{
+    padding: 0;
+    margin: 0;
+    /* background-color: black; */
+}
+.blog{
+    border: solid 2px black;
+    background-color: aliceblue;
+    box-shadow: 0 0 10px 2px;
+}
+.navbar{
+    background-color: lightgray;
+    box-shadow: 0 0 10px 2px;
+}
+a{
+    color: black;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+#posts{
+    border: solid 2px black;
+    background-color: aliceblue;
+    box-shadow: 0 0 10px 2px;
+    padding: 5px;
+}
+#login{
+    border: solid 2px black;
+    background-color: aliceblue;
+    box-shadow: 0 0 10px 2px;
+    padding: 5px;
+}
+.text{
+    border: solid 2px black;
+    background-color: aliceblue;
+    box-shadow: 0 0 10px 2px;
+    padding: 5px;
+}
+.delete-comment-button{
+    padding: 2px;
+    margin: 2x;
+}
+#comment-out{
+    padding: 3px;
+}
+#title{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: ;
+}

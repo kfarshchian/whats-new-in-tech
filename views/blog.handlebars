@@ -16,7 +16,7 @@
 <div class="comment_body" id="comment_body">
 {{/if}}
  {{#each comments as |comment|}}
- <div  style="border-style: solid;">
+ <div id="comment-out" style="border-style: solid;">
  <p id='comment_description' name="comment-body">{{comment.comment_description}}</p>
  <button class="delete-comment-button" id="delete-comment-button" comment-id="{{comment.id}}" >Delete</button>
  </div>
