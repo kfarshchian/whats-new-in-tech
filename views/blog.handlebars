@@ -7,7 +7,14 @@
 {{#if logged_in}}
 <form class="new-comment-form" data-blogid={{id}}>
   <div>
-    <textarea class="ml-5" id='comment_description' name="comment-body"></textarea>
+    <textarea class="ml-5" id='comment_description' name="comment-body">
+      
+
+
+
+       -{{user.username}} {{format_date date_created}}
+    </textarea>
+   
   </div>
   <div>
     <button class="button is-primary ml-5 mb-5" type="submit">Submit Comment</button>
@@ -18,7 +25,7 @@
  {{#each comments as |comment|}}
  <div id="comment-out" style="border-style: solid;">
  <p id='comment_description' name="comment-body">{{comment.comment_description}}</p>
- <button class="delete-comment-button" id="delete-comment-button" comment-id="{{comment.id}}" >Delete</button>
+ <button class="btn btn-sm btn-danger" id="delete-comment-button" comment-id="{{comment.id}}" >Delete</button>
  </div>
  {{/each}}
 </div>
