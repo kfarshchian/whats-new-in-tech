@@ -1,12 +1,12 @@
 
 
-  # My-Menu
+  # What's New In Tech
 
   ## License
   [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
   ## Description
-  We wanted to make a website that could search recipes and save them after logging into the database. The idea was to store all the recipes we want to try into one location so we could find them at any time without having to look through our search history or having to write them down. It is also a hassle to go back and find them in our browsers books marks. With a simple login your profile displays every recipe you have saved, and you can delete the ones you do not like with a touch of a button. 
+  There are many different new technologies being invented every day, and fairly often older technology is getting updated with new features and refactors to make the software run smoother. I decided to build a blog site focused on technology. This website will let users interact with each other’s posts and comment on them. The main page is all the post from all the users to browse and read what is new or what updates have been made. You can read the posts at any time but must be logged in to comment on them. 
 
   ## Table of Contents
   - [License](#License)
@@ -25,6 +25,7 @@
   - npm i sequelize
   - npm i express-handlebars
   - npm i bcrypt
+  - npm i express
   - npm i express-session
   - npm i connect-session-sequelize 
 
@@ -34,11 +35,13 @@
   ![alt_text](./assets/images/site3.png)
   ![alt_text](./assets/images/site4.png)
 
-  This project makes an API call to Edamam with many different search variables including Keyword, Diet Type,  Health Constraints, Cuisines Types, Meal Type, and Calorie Count. After the search you can save the recipe to your profile in the database by signing up or logging in if you already have an account. You can also manage your recipes and delete the ones you don’t want or did not like after cooking them. 
+  The website blog posts can be read by anyone on the home page. However, to comment on someone’s, post you must be logged in. You can login and sign up on the login page. After you are logged in the website will direct you to your profile page when all of your blog posts are listed. Once you are on your profile page you can go to any of your blog posts and read the comments attached to them. The comments will show the user who created them and the date it was submitted. 
+  
+  The frontend end was developed using handlebars.js, JavaScript, CSS, Bootstrap, and JASS. The back end uses a MySQL server running Sequelize, Express, Dotevn, and Bcrypt.
+
   
   ## Credits
   - Kameron Farshchian
-  - Kelsey O'Kelley
   - Gustavo Carrillo
 
   ## Tests
