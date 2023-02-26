@@ -32,6 +32,7 @@
   ![alt_text](./assets/images/site1.png)
   ![alt_text](./assets/images/site2.png)
   ![alt_text](./assets/images/site3.png)
+  ![alt_text](./assets/images/site4.png)
 
   This project makes an API call to Edamam with many different search variables including Keyword, Diet Type,  Health Constraints, Cuisines Types, Meal Type, and Calorie Count. After the search you can save the recipe to your profile in the database by signing up or logging in if you already have an account. You can also manage your recipes and delete the ones you don’t want or did not like after cooking them. 
   
