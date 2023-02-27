@@ -30,6 +30,9 @@
   - npm i connect-session-sequelize 
 
   ## Usage
+
+   - https://new-in-tech.herokuapp.com/
+
   ![alt_text](./assets/images/site1.png)
   ![alt_text](./assets/images/site2.png)
   ![alt_text](./assets/images/site3.png)
