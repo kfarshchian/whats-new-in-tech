@@ -1,3 +1,4 @@
+//logout user when they are done with session
 const logout = async () => {
   const response = await fetch('/api/users/logout', {
     method: 'POST',

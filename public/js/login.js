@@ -1,3 +1,4 @@
+//allows users to login to website to post and comment
 const loginFormHandler = async (event) => {
   event.preventDefault();
 
@@ -18,7 +19,7 @@ const loginFormHandler = async (event) => {
     }
   }
 };
-
+//allows users to sign up to website to post and comment
 const signupFormHandler = async (event) => {
   event.preventDefault();
 

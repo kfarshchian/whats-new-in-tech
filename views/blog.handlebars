@@ -1,9 +1,11 @@
+{{!-- Blog page info pulls up when blog is clicked on --}}
 <div class="text">
   <h2>{{title}}</h2>
   <p>{{description}}</p>
   <p>Created by {{user.username}} on {{format_date date_created}}</p> 
 <div>
 <div>
+  {{!--Lets user submit comment when logged in--}}
 {{#if logged_in}}
 <form class="new-comment-form" data-blogid={{id}}>
   <div>
@@ -22,6 +24,7 @@
 </form>
 <div class="comment_body" id="comment_body">
 {{/if}}
+{{!-- Lets user delete owned comments--}}
  {{#each comments as |comment|}}
  <div id="comment-out" style="border-style: solid;">
  <p id='comment_description' name="comment-body">{{comment.comment_description}}</p>

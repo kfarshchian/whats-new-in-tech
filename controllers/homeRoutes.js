@@ -1,7 +1,7 @@
 const router = require('express').Router();
 const { Blog, User, Comment } = require('../models');
 const withAuth = require('../utils/auth');
-
+// Shows all blogs on rendered homepage route 
 router.get('/', async (req, res) => {
   try {
     const blogData = await Blog.findAll({
@@ -22,7 +22,7 @@ router.get('/', async (req, res) => {
     res.status(500).json(err);
   }
 });
-
+// Pulls up blogs by ID 
 router.get('/blog/:id', async (req, res) => {
   try {
     const blogData = await Blog.findByPk(req.params.id, {
@@ -49,7 +49,7 @@ router.get('/blog/:id', async (req, res) => {
     res.status(500).json(err);
   }
 });
-
+// Renders the profile page
 router.get('/profile', withAuth, async (req, res) => {
   try {
     const userData = await User.findByPk(req.session.user_id, {
@@ -67,7 +67,7 @@ router.get('/profile', withAuth, async (req, res) => {
     res.status(500).json(err);
   }
 });
-
+// Renders login route
 router.get('/login', (req, res) => {
   if (req.session.logged_in) {
     res.redirect('/profile');
@@ -77,14 +77,5 @@ router.get('/login', (req, res) => {
   res.render('login');
 });
 
-
-router.get('/signup', (req, res) => {
-  if (req.session.logged_in) {
-    res.redirect('/profile');
-    return;
-  }
-
-  res.render('signup');
-});
 
 module.exports = router;

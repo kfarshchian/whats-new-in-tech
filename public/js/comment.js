@@ -1,3 +1,4 @@
+//allows users to add a comment on a blog post.
 const commentFormHandler = async function(event) {
   event.preventDefault();
       const blog_id = document.querySelector('.new-comment-form').dataset.blogid;
@@ -17,7 +18,7 @@ const commentFormHandler = async function(event) {
     document.location.reload();
   }
 };
-
+//allows users to delete a comment on a blog post.
 const delButtonHandler = async (event) => {
   if (event.target.hasAttribute('comment-id')) {
     const id = event.target.getAttribute('comment-id');

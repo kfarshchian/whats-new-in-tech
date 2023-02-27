@@ -1,8 +1,8 @@
+//allows users to post on blog
 const newFormHandler = async (event) => {
   event.preventDefault();
 
   const blog_title = document.querySelector('#blog-blog_title').value.trim();
-  
   const description = document.querySelector('#blog-desc').value.trim();
 
   if (blog_title && description) {
@@ -21,7 +21,7 @@ const newFormHandler = async (event) => {
     }
   }
 };
-
+//allows users delete their posts
 const delButtonHandler = async (event) => {
   if (event.target.hasAttribute('data-id')) {
     const id = event.target.getAttribute('data-id');
